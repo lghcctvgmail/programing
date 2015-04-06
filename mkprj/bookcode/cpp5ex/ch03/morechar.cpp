@@ -4,8 +4,9 @@ int main()
 {
     using namespace std;
     char c = 'M';       // assign ASCII code for M to c
+    int ch = 9;
     int i = ch;          // store same code in an int
-    cout << "The ASCII code for " << ch << " is " << i << endl;
+    cout << "The abd ASCII code for " << ch << " is " << i << endl;
 
     cout << "Add one to the character code:" << endl;
     ch = ch + 1;          // change character code in c
