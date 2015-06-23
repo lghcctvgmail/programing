@@ -49,4 +49,5 @@ ido.last
 projectile.cache
 *.o
 *.d
+*.out
 

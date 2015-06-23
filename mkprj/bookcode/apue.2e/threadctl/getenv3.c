@@ -3,6 +3,9 @@
 #include <pthread.h>
 #include <stdlib.h>
 
+#include <apue.h>
+
+#define ARG_MAX 1000
 static pthread_key_t key;
 static pthread_once_t init_done = PTHREAD_ONCE_INIT;
 pthread_mutex_t env_mutex = PTHREAD_MUTEX_INITIALIZER;
