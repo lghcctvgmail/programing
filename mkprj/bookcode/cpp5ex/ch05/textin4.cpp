@@ -1,5 +1,7 @@
 // textin4.cpp -- reading chars with cin.get()
 #include <iostream>
+#include <stdio.h>
+
 int main(void)
 {
     using namespace std;

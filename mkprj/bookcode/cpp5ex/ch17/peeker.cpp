@@ -1,5 +1,8 @@
 // peeker.cpp -- some istream methods
 #include <iostream>
+#include <stdio.h>
+
+using namespace std;
 
 int main()
 {
@@ -29,7 +32,7 @@ int main()
     else
     {
         cout << "End of file reached.\n";
-        std::exit(0);
+        return 0;
     }
 
     while(cin.peek() != '#')    // look ahead

@@ -1,11 +1,12 @@
 // stock2.cpp -- improved version
 #include <iostream>
 #include "stock2.h"
+#include <string.h>
 
 // constructors
 Stock::Stock()        // default constructor
 {
-    std::strcpy(company, "no name");
+    strcpy(company, "no name");
     shares = 0;
     share_val = 0.0;
     total_val = 0.0;
@@ -13,7 +14,7 @@ Stock::Stock()        // default constructor
 
 Stock::Stock(const char * co, int n, double pr)
 {
-    std::strncpy(company, co, 29); 
+    strncpy(company, co, 29); 
     company[29] = '\0';
 
     if (n < 0)

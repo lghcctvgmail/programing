@@ -1,25 +1,17 @@
-
-MODULES = ./ch02 
-CLEANMODULES = $(addsuffix _RM, $(MODULES))
-
-all:$(MODULES)
-	@echo compile each dir ...
-
-aaa:
-	@echo aaaaaaaaaaaa
-
-$(MODULES):
-	echo now we jump into next directrory $@
-	make --directory=$@
-
-PHONY: all clean $(MODULES) $(CLEANMODULES)
-
-clean:$(CLEANMODULE)
-$(CLEANMODULE):
-	make --directory=$@ clean
+DIRS = ch02 ch03 ch04 ch05 ch06 ch07 ch08 ch09 ch10 ch11 ch12 ch13 ch14 ch15 ch16 ch17 chXE
+#DIRS = chXE
 
 
+all:
+	$(MAKE) `./systype.sh`
+
+clean:
+	for i in $(DIRS); do \
+		(cd $$i && $(MAKE) -f `../systype.sh`.mk clean) || exit 1; \
+	done
 
 
-
-
+linux:
+	for i in $(DIRS); do \
+		(cd $$i && $(MAKE) -f linux.mk) || exit 1; \
+	done

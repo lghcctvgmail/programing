@@ -1,12 +1,14 @@
 // stock1.cpp – Stock class implementation with constructors, destructor added
 #include <iostream>
+#include <string> 
+#include <string.h>
 #include "stock1.h"
 
 // constructors (verbose versions)
 Stock::Stock()        // default constructor
 {
     std::cout << "Default constructor called\n";
-    std::strcpy(company, "no name");
+    strcpy(company, "no name");
     shares = 0;
     share_val = 0.0;
     total_val = 0.0;
@@ -15,7 +17,7 @@ Stock::Stock()        // default constructor
 Stock::Stock(const char * co, int n, double pr)
 {
     std::cout << "Constructor using " << co << " called\n";
-    std::strncpy(company, co, 29);
+    strncpy(company, co, 29);
     company[29] = '\0';
 
     if (n < 0)

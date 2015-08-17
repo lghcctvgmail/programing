@@ -1,6 +1,7 @@
 // usestok2.cpp -- use the Stock class
 // compile with stock2.cpp
 #include <iostream>
+#include <string.h>
 #include "stock2.h"
 
 const int STKS = 4;
