@@ -18,7 +18,7 @@ all:
 	cd 15; make 
 	cd 16; make 
 	cd 17; make 
-	cd 18; make 
+#	cd 18; make 
 
 clean: 
 	cd 1; make clean 
@@ -38,7 +38,7 @@ clean:
 	cd 15; make clean 
 	cd 16; make clean 
 	cd 17; make clean 
-	cd 18; make clean 
+#	cd 18; make clean 
 
 clobber: 
 	cd 1; make clobber 

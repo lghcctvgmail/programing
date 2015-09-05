@@ -50,4 +50,6 @@ projectile.cache
 *.o
 *.d
 *.out
+*.exe
+
 

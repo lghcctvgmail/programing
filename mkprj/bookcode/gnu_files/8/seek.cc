@@ -39,6 +39,9 @@ int main()
         return EXIT_FAILURE;
     } 
 
+	
+    cout << "111" <<endl;
+	
     // inOut is opened in  ate mode, so it starts out positioned at the end,
     // which we must remember as it is the original end-of-file position
     ifstream::pos_type end_mark = inOut.tellg();
@@ -48,6 +51,7 @@ int main()
     int cnt = 0;                  // accumulator for byte count
     string line;                  // hold each line of input
 
+    cout << "222" <<endl;
     // while we haven't hit an error and are still reading the original data 
     // and successfully read another line from the file
     while (inOut && inOut.tellg() != end_mark
@@ -59,6 +63,7 @@ int main()
 	ifstream::pos_type mark = inOut.tellg();  
         inOut.seekp(0, fstream::end);// set write marker to end
         inOut << cnt;             // write the accumulated length
+		cout << "322  " << cnt <<endl;
         // print separator if this is not the last line
         if (mark != end_mark) inOut << " "; 
         inOut.seekg(mark);        // restore read position
@@ -66,6 +71,7 @@ int main()
     inOut.clear();                // clear flags in case we hit an error
     inOut.seekp(0, fstream::end); // seek to end
     inOut << "\n";                // write a newline at end of file
+    cout << "444" <<endl;
 
     return 0;
 }
